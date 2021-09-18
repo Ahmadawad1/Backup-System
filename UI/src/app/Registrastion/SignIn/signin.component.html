@@ -1,0 +1,22 @@
+<form [formGroup]="reactiveForm">
+<h3>Login</h3>
+<br>
+<input type="email" formControlName="email" autocomplete="off" class="InputField" name="email" placeholder="Email" >
+<span *ngIf="reactiveForm.controls['email'].errors && reactiveForm.controls['email'].errors.required && (reactiveForm.controls['email'].dirty || reactiveForm.controls['email'].touched)" class="ErrorMsg">Required Field</span>
+<span *ngIf="reactiveForm.controls['email'].errors && reactiveForm.get('email').errors.email && (reactiveForm.controls['email'].dirty || reactiveForm.controls['email'].touched)" class="ErrorMsg">Invalid Email</span>
+<br><br>
+<input type="password" formControlName="password" class="InputField" name="Password" placeholder="Password" >
+<span *ngIf="reactiveForm.controls['password'].errors && reactiveForm.controls['password'].errors.required && (reactiveForm.controls['password'].dirty || reactiveForm.controls['password'].touched)" class="ErrorMsg">Required Field</span>
+<br><br>
+<input type="checkbox" (click)='CheckBox()' id="chbx" style="cursor: pointer;outline: none;">&nbsp;&nbsp;<label for="chbx" (click)='CheckBox()' style="cursor: pointer;">Remember Me</label>
+<br><br>
+<label style="font-size: 14px;">Not a Member?</label>&nbsp;&nbsp;<a  [routerLink]="['/register']">Register</a>
+<br>
+<span *ngIf ="databaseError" class="ErrorMsg">Database Error</span>
+<span *ngIf ="incorrectPassword" class="ErrorMsg">Incorrect Password</span>
+<span *ngIf ="invalidEmail" class="ErrorMsg">Invaild Email</span>
+
+<br><br>
+<button id="Confirm" type="button" (click)="SubmitForm()">Confirm</button> &nbsp;&nbsp;<button id="Reset" type="reset">Reset</button>
+<br><br>
+</form>

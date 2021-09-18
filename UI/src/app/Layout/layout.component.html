@@ -1,0 +1,97 @@
+
+<ul (mouseover)="SideBarHover()" (mouseout)="SideBarOut()" [class]="sideBarSize" id="SideBar">
+<li id="LogoItem"><img [class]='imageLogo'  [src]="imageSource"><span id="SafeStorage" [class]="safeStorage">Safe</span></li>    
+<li (click)="ClickDashboard()" [class.leftTabStyle]="dashboardTab"><span class="bi bi-house Icon"></span> &nbsp; <span data-id="tabsTitle" [class]="tabsTitle">Dashboard</span> </li>
+<li (click)="ClickFilesManager()" [class.leftTabStyle]="filesTab"><span class="bi bi-file-earmark Icon"></span> &nbsp;<span data-id="tabsTitle" [class]="tabsTitle">Files Manager</span></li>
+<li (click)="ClickAccountSettings()" [class.leftTabStyle]="accountTab"><span class="bi bi-gear-fill Icon"></span> &nbsp;<span data-id="tabsTitle" [class]="tabsTitle">Account Settings</span></li>
+<li (click)="ClickContactUs()" [class.leftTabStyle]="contactTab"><span class="bi bi-envelope-fill Icon"></span> &nbsp;<span data-id="tabsTitle" [class]="tabsTitle">Contact Us</span></li>
+<li (click)="ClickAboutUs()" [class.leftTabStyle]="aboutTab"><span class="bi bi-info-circle Icon"></span> &nbsp;<span data-id="tabsTitle" [class]="tabsTitle">About Us</span></li>
+<li [class.leftTabStyle]="" id="UpgradeItem"><span class="bi bi-bag-check Icon"></span>&nbsp;<span data-id="tabsTitle" [class]="tabsTitle"> Upgrade</span></li>
+<li [class.leftTabStyle]="" id="PinItem"><span (click)="Pin()" [class]="pinIcon"></span></li>
+<li [class.leftTabStyle]="" id="LastItem" ><span [class]="copyRights">&copy; All Rights Reserved 2021</span></li>
+</ul>
+<div [class]="contentsAndHeaders" id="ContentsWithHeader">
+<div id="HeaderDiv">
+    <ul [class]="header">
+    <li (click)="ClickDashboard()" another-attribute="1" [class.tabStyle]="dashboardTab">Dashboard</li>
+    <li (click)="ClickFilesManager()" another-attribute="1" [class.tabStyle]="filesTab">Files Manager</li>
+    <li (click)="ClickAccountSettings()" another-attribute="1" [class.tabStyle]="accountTab">Account</li>
+    <li (click)="ClickFB()" another-attribute="1" [class.tabStyle]="aboutTab">More</li>
+    <ul [class]="iconsContainer">
+        <li (click)="ToggleSearchBox()">
+            <span class="bi bi-search"></span>  
+        </li>
+        <li (click)="ToggleQuickActions()"><span class="bi bi-box-seam"></span></li>
+        <li (click)="ToggleLang()"><span class="bi bi-globe"></span></li>
+        <li (click)="ToggleAccount()"><span class="bi bi-person"></span></li>
+    </ul>
+   
+</ul>
+<img src="/assets/AccountList/menu.png" (click)="ToggleFullBar()" class="Bars"/>
+<span *ngIf="showSearchBox" class="SearchBox">
+    <span class="bi bi-search"></span>
+     <input type="text" placeholder="Search" />
+ </span>
+ <div *ngIf="showQuickActions" class="QuickActions">
+<label>Quick Links</label>
+<div class="Box2">
+<span class="BorderRight">
+    <img src="/assets/Activity/upload.png" class="QuickActionsImages"/>
+    <br>
+    Upload
+</span>
+<span data-toggle="modal" data-target="#reportModal">
+    <img src="/assets/Files/error.png" class="QuickActionsImages"/>
+    <br>
+    Report
+</span>
+</div>
+<div class="Box2">
+    <span class="BorderRight">
+        <img src="/assets/Files/folder.png" class="QuickActionsImages"/>
+        <br>
+        Manage
+    </span>
+    <span>
+        <img src="/assets/Files/debit-card.png" class="QuickActionsImages"/>
+        <br>
+        Payment
+    </span>
+</div>
+</div>
+<ul *ngIf="showLang" class="Lang">
+    <li style="background-color: #e3f1ff;"><img src="/assets/Flags/eng.png" class="LangImage" />English</li>
+    <li><img src="/assets/Flags/jordan.png" class="LangImage"/>Arabic</li>
+    <li><img src="/assets/Flags/spain.png" class="LangImage"/>Spanish</li>
+    <li><img src="/assets/Flags/france.png" class="LangImage"/>French</li>
+    <li><img src="/assets/Flags/japan.png" class="LangImage"/>Japanese</li>
+</ul>
+<ul *ngIf="showAccount" class="AccountList">
+   <li id="AccountFirstItem">
+    <img [src]="personalImage" class="ProfileImage" >
+    <div>
+    <span class="AccountInfoName">{{username}}</span><br>
+    <span class="AccountInfoEmail">{{useremail}}</span><br>
+
+    </div>
+   </li>
+    <li (click)="ClickAccountSettings()" style="border-top: 1px solid #e3f1ff;"><img src="/assets/AccountList/settings.png" class="AccountImage"/>Account Settings</li>   
+    <li (click)="ClickFB()"><img src="/assets/AccountList/fb.png" class="AccountImage"/>Feedback</li>
+    <li (click)="ClickAboutUs()"><img src="/assets/AccountList/info.png" class="AccountImage"/>About Us</li>
+    <li (click)="SignOut()" style="color: rgb(241, 88, 88);border-top: 1px solid #e3f1ff;"><img src="/assets/AccountList/key.png" class="AccountImage"/>Sign out</li>
+</ul>
+
+</div>
+<ul *ngIf="showFullSideBar" id="FullSideBar">
+    <li><span class="bi bi-house Icon"></span> &nbsp;Dashboard</li>
+    <li><span class="bi bi-file-earmark Icon"></span> &nbsp;Files Manager</li>
+    <li><span class="bi bi-gear-fill Icon"></span> &nbsp;Account Settings</li>
+    <li><span class="bi bi-envelope-fill Icon"></span> &nbsp;Contact Us</li>
+    <li><span class="bi bi-info-circle Icon"></span> &nbsp;About Us</li>
+</ul>
+<router-outlet>
+   
+    
+</router-outlet>
+
+</div>

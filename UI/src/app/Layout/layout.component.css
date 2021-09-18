@@ -1,0 +1,378 @@
+
+#MainDiv
+{
+background-color:white;
+height: 100%;
+width: 100%;
+min-height: 100%;
+text-align: center;
+display: inline-flex;
+flex-direction: row;
+margin: 0;
+}
+.header li{
+   margin-right: 20px;
+   cursor: pointer;
+   font-size: 14px;
+   color: #5e6278;
+   font-weight: 500;
+   transition: ease 0.5s;
+} 
+.QuickActions label{
+    color: black;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 21px;
+}
+.QuickActions{
+    height: 330px;
+    width: 20%;
+    position: absolute;
+    margin-top: 50px;
+    text-align: center;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    background-color: #fff;
+    right: 12%;
+    color: gray;
+    padding-top: 10px;
+    font-weight: 400;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+}
+.tabStyle{
+    color:#009ef7 !important ;
+    background-color:#ecf5fd ;
+    padding: 5px !important;
+    border-radius: 5px;
+}
+.LangImage,.AccountImage{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.AccountList{
+    list-style-type: none;
+    padding: 10px 0 10px 0;
+    width: 15%;
+    position: absolute;
+    margin-top: 50px;
+    text-align: center;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    background-color: #fff;
+    right: 7%;
+    color:#009ef7;
+    font-size: 13px;
+
+    font-weight: 400;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+}
+.Lang{
+    list-style-type: none;
+    padding: 10px 0 10px 0;
+    width: 10%;
+    position: absolute;
+    margin-top: 50px;
+    text-align: center;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    background-color: #fff;
+    right: 10%;
+    color: black;
+    font-size: 13px;
+
+    font-weight: 400;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+}
+.Lang li,.AccountList li{
+    padding: 10px;
+    text-align: left; cursor: pointer;
+    transition:ease 0.5s;
+}
+.ProfileImage{
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+}
+#AccountFirstItem{
+padding: 15px 0 15px 5px;
+cursor:default;
+display: inline-flex;
+flex-direction: row;
+}
+#AccountFirstItem div{
+    padding: 10px 0 0 10px;
+}
+.AccountInfoEmail{
+    color: black;
+    opacity: 0.4;
+    font-size: 12px;
+
+}
+.AccountInfoName{
+    color: black;
+    font-size: 17px;
+
+}
+.leftTabStyle{
+    background-color: #056196;
+    color:white;
+}
+
+.Lang li:hover,.AccountList li:hover:not(#AccountFirstItem){
+    background-color: #e3f1ff;
+}
+.BorderRight{
+    border-right:1px solid #e3f1ff
+}
+.QuickActionsImages
+{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+.Box1,.Box2{
+
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+}
+.Box1 span,.Box2 span{
+ width: 50%;
+ height: 100%;
+ text-align: center;
+ padding: 30px;
+ border-top:1px solid #e3f1ff;
+ cursor: pointer;
+ transition:ease 0.5s;
+ color: black;
+}
+.Box1 span:hover,.Box2 span:hover{
+background-color: #e3f1ff;
+}
+.SearchBox{
+position: absolute;
+margin-top: 50px;
+border: 1px #fff solid;
+border-radius: 5px;
+padding: 20px;
+width: 20%;
+background-color: #fff;
+right: 15%;
+color: gray;
+font-weight: 400;
+box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+}
+.SearchBox input{
+border:hidden;
+outline:none;
+margin-left: 5px;
+}
+.IconsContainer{
+    float: right;
+    margin: 0;
+  position: absolute;
+  right: 80px;
+    padding: 0;
+    list-style-type: none;
+    display: inline-flex;
+}
+.IconsContainer2{
+    float: right;
+    margin: 0;
+  position: absolute;
+  right: 250px;
+    padding: 0;
+    list-style-type: none;
+    display: inline-flex;
+}
+#HeaderDiv{
+    width: 100%; 
+    display: inline-flex;
+    flex-direction: row;
+      background-color: #fff;
+    height: 8%; 
+    z-index: 900;
+    position: fixed;
+    padding-top: 15px;
+}
+.IconsContainer li span,.IconsContainer2 li span {
+    color: #3699FF;
+    font-weight: 700;
+    font-size:18px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: ease 0.5s;
+}
+.IconsContainer li span:hover,.IconsContainer2 li span:hover{
+    background-color: #bfd8e7;
+}
+.header li:hover{
+    color: #009ef7;
+}
+.header{
+    display: inline-flex;
+    flex-direction: row;
+    list-style-type: none;
+   
+  
+}
+#LogoItem{
+    padding:30PX 30PX 30PX 10px;
+    white-space: nowrap
+}
+.imageSize{
+    width: 40px;
+    height: 40px;
+   
+}
+.showInline{
+    display: unset;
+
+}
+#ContentsWithHeader{
+    width: 95%;
+ 
+    display: block;
+    flex-direction: row;
+    background-color:#eff2f5;
+    min-height: 100%;
+
+    margin: 0;
+}
+#SideBar{
+    list-style-type: none;
+top: 0;
+position: fixed;
+    transition: ease 0.3s;
+    background-color: #181c32;
+    color: #888C9F;
+    font-family: system-ui;
+    text-align:left ; 
+    min-height: 100%;
+    padding: 0; 
+z-index: 1000;
+}
+#SideBar li:not(#LogoItem){
+width:100%;
+margin: 0;
+font-size: 15px;
+padding: 10px 20px 10px 20px ;
+transition: ease 0.5s;
+cursor: pointer;
+display: inline-flex;
+flex-direction: row;
+white-space: nowrap
+}
+.largeContents{
+    width: 95% !important;
+    margin-left: 5% !important;
+}
+.smallContents{
+    width:83% !important;
+    margin-left: 17% !important;
+}
+#PinItem{
+   text-align: right;
+   padding: 50px 0 0 15px !important;
+}
+
+
+#LastItem{
+    position: absolute;
+    bottom: 0;;
+    left: 0;
+}
+#UpgradeItem{
+    background-color: #db1430;color:white
+}
+#FullSideBar{
+    z-index: 80;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: ease 0.5s;
+    min-height: 100%;
+    display: none;
+    list-style-type: none;
+    background-color: #272b42;
+    padding:0;
+    margin-top: 52px;
+}
+#FullSideBar li{
+width: 100%;
+color: white;
+padding:20px;
+font-size:20px;
+border-bottom: 1px solid #056196;
+}
+#SideBar li:not(#LogoItem,#LastItem):hover{
+  color: white;
+    }
+#SafeStorage{
+    margin-left: 12%;
+    font-size: 22px;
+    font-weight: 400;
+}.Bars{
+    width: 25px;
+    height: 25px;
+   
+    display: none;
+    right: 15px;
+    top: 10px;
+    position: absolute;
+}
+li span[data-id="tabsTitle"]{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.Icon{
+    font-size: 20px;
+}
+.smallSideBar{
+    width: 5% !important;
+}
+.largeSideBar{
+    width: 17%;
+}
+.show{
+display: inline-flex
+}
+.pinned{
+    transition: ease 0.5s;
+    color: white;
+    transform: rotate(-43deg);
+}
+.hide{
+    display: none;
+    transition: none;
+}
+@media screen and  (max-width:1124px){
+    #SideBar{
+        display: none !important;
+    }
+    #FullSideBar{
+        display: block;
+    }
+    .Bars{
+        display:block !important;
+    }
+  #ContentsWithHeader{
+      width:100% !important;
+      margin-left: 0 !important;
+      padding: 0 !important;
+  }
+    
+}@media screen and  (max-width:750px){
+li[another-attribute="1"]{
+    display: none !important;
+}
+.IconsContainer{
+    right: unset;
+    float: left;
+}
+.SearchBox,.QuickActions,.Lang,.AccountList{
+    width: 80% !important;
+}
+}

@@ -1,0 +1,99 @@
+<div id="AccountSettingsDiv">
+
+    <div id="AccountSettingsHeader">
+        <span>Account Settings</span>
+      
+       
+       
+       
+      </div>
+
+<div class="AccountSettingsBody">
+  <form class="ImageForm">
+    <label class="FormLabel"><span class="bi bi-card-image"></span>Personal Image</label><br>
+
+    <img src="{{personalImage}}" class="Image">
+    <div id="BtnContainer">
+    <button type="button" (click)="fileInput.click();" class="ImageBtn"><span class="bi bi-upload"></span> Upload From PC</button>
+     <input  style="visibility: hidden;" #fileInput type="file" (change)="uploadFiles($event)"/>
+      <button type="button" (click)="RemoveImage()" class="ImageBtn"><span class="bi bi-trash"></span> Remove Image</button><br>
+      <br>
+      <label class="text-primary">{{imageResponse}}</label>
+    </div>
+  </form>
+  <form>
+    <label class="FormLabel"><span class="bi bi-person"></span>Username</label><br>
+    <div class="form-group">
+      <input type="text" class="form-control" id="" value="{{username}}" disabled >
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="" placeholder="Enter New Username">
+    </div>
+
+    <button type="button" class="btn btn-primary">Save Changes</button> &nbsp; &nbsp; <button type="reset" class="btn btn-secondary">Reset</button>
+
+  </form>
+</div>
+
+      <div class="AccountSettingsBody">
+
+  <form>
+    <label class="FormLabel"><span class="bi bi-envelope"></span>Email</label><br>
+
+    <div class="form-group">
+      <input type="email" value="{{useremail}}" class="form-control" id="" disabled >
+    </div>
+    <div class="form-group">
+      <input type="email" required class="form-control" id="" placeholder="Enter New Email">
+    </div>
+
+    <button type="button" class="btn btn-primary">Save Changes</button> &nbsp; &nbsp; <button type="reset" class="btn btn-secondary">Reset</button>
+  </form>
+  <form>
+    <label class="FormLabel"><span class="bi bi-geo-alt-fill"></span>Location</label><br>
+
+    <div class="form-group">
+      <input type="text" required value="{{location}}" class="form-control" id="" disabled  >
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control" id="" placeholder="Enter New Location">
+    </div>
+
+    <button type="button" class="btn btn-primary">Save Changes</button> &nbsp; &nbsp; <button type="reset" class="btn btn-secondary">Reset</button>
+  </form>
+</div>
+
+      <div class="AccountSettingsBody">
+
+  <form >
+    <label class="FormLabel"><span class="bi bi-telephone"></span>Phone Number</label><br>
+
+    <div class="form-group">
+      <input type="text" value="{{phone}}" class="form-control" id="" disabled >
+     
+    </div>
+    <div class="form-group">
+      <input type="text"  name="newPhone" #phoneInput (input)="newPhone  = phoneInput.value" required class="form-control" id="" placeholder="Enter New Phone">
+      <br>
+      <label class="text-primary">{{phoneResponse}}</label>
+
+    </div>
+
+    <button type="button" (click)="ChangePhone()"  class="btn btn-primary">Save Changes</button> &nbsp; &nbsp; <button type="reset" class="btn btn-secondary">Reset</button>
+  </form>
+  <form>
+    <label class="FormLabel"><span class="bi bi-lock-fill"></span>Password</label><br>
+
+    <div class="form-group">
+      <input type="password" value="{{password}}" class="form-control" id="" disabled>
+    </div>
+    <div class="form-group">
+      <input type="password" required class="form-control" id="" placeholder="Enter New Password">
+    </div>
+    <div class="form-group">
+      <input type="password" required class="form-control" id="" placeholder="Confirm New Password">
+    </div>
+    <button type="button" class="btn btn-primary">Save Changes</button> &nbsp; &nbsp; <button type="reset" class="btn btn-secondary">Reset</button>
+  </form>
+</div>
+</div>

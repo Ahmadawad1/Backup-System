@@ -1,0 +1,52 @@
+
+#AboutDiv{
+    width: 100%;
+    height: 100%;
+padding: 90px 5% 30px 5%;
+    text-align: left;
+    display: inline-flex;
+}
+#AboutBody{
+    padding-top: 20px;;
+    width: 60%; border-right:1px solid white;
+    box-shadow: 3px 2px 4px;
+}
+span{
+    color: #3F4254;
+    font-size: 26px;
+    font-weight: 600;
+}
+#AboutHeader{
+    display: block;
+    width: 100%;
+    padding:0 0 10px 0;
+}
+#RightDiv{
+
+width: 40%;
+}
+#RightDiv img{
+    height: 100%;
+    width: 100%;
+}
+img{
+    width: 100px;
+    height:100px;
+    margin-right: 40px;
+    margin-top: 15px;
+}
+.Block{
+    display: inline-flex;
+   
+    padding: 10px 0 10px 10px;
+}
+
+p{
+    width: 95%;  font-size: 19px;
+}
+@media screen and  (max-width:1000px){
+  
+    p{
+        width: 100% !important;
+    }
+ }

@@ -1,0 +1,182 @@
+<div id="DashboardDiv">
+    <div id="DashboardHeader">
+      <span>Dashboard</span>
+     <ul id="HeaderButtons">
+        <li><button class="HeaderBtns">Today : {{date}}</button></li>
+        <li> <button class="HeaderBtns2" type="button" data-toggle="modal" data-target="#sectionsModal"> Manage Sections</button></li>
+     
+     </ul>
+     
+     
+     
+    </div>
+<div [class]="dashboardElement">
+<div class="ElementContent">
+    <h5>Total Storage</h5>
+    <google-chart class="Graph" [type]="storageChartType" [data]="storageChartData" [columns]="storageChartColumns" [options]="storageChartOptions"></google-chart>
+    <bR>
+        <button class="HeaderBtns"  type="button" data-toggle="modal" data-target="#reportModal">Report Issue</button><button class="HeaderBtns3">Hide</button>
+</div>
+
+</div>
+<div [class]="dashboardElement">
+    <div class="ElementContent">
+        <h5>Last Month</h5>
+        <google-chart class="Graph" [type]="actionChartType" [data]="actionChartData" [columns]="actionChartColumns" [options]="actionChartOptions"></google-chart>
+        <bR>
+            <button class="HeaderBtns"  type="button" data-toggle="modal" data-target="#reportModal">Report Issue</button><button class="HeaderBtns3">Hide</button>
+    </div>
+   
+</div>
+<div class="DashboardAccountElement" *ngIf="showAccountInfo">
+    <div class="ElementContent">
+        <h5>Account Info</h5><br>
+        <img src="{{personalImage}}" class="AccountInfoImage" >
+        <span class="AccountInfoName">{{username}}</span><br>
+        <div id="AccountDetailsContainer"><br>
+        <i class="bi bi-envelope-fill"></i> <span>{{useremail}}</span><br>
+        <i class="bi bi-telephone-fill"></i> <span>{{phone}}</span><br>
+        <i class="bi bi-geo-alt-fill"></i> <span>{{location}}</span><br><br>
+        <button class="HeaderBtns2" type="button" (click)="GotoSettings()" >Edit</button><button class="HeaderBtns3" (click)="HideAccountInfo()">Hide</button>
+    </div>
+    </div>
+  
+</div>
+<div id="FullWidthDiv">
+    <div class="HalfWidthDiv">
+        <div class="ElementContentHalf">
+            <h5>Statistics</h5><br>
+            <div class="Statistic">
+                <span class="StatisticTypeImage">   <img src="/assets/Files/picture.png" class="StatisticImage">
+                <span class="StatisticType">Image</span></span>
+               <span class="StatisticBar">
+                <label for="file">32%</label>
+                <progress id="file" value="32" max="100"> 32% </progress>
+            </span>
+            </div>
+            <div class="Statistic">
+                <span class="StatisticTypeImage">
+                <img src="/assets/Files/video.png" class="StatisticImage">
+                <span class="StatisticType">Video</span></span>
+
+                <span class="StatisticBar">
+                    <label for="file">8%</label>
+                    <progress id="file" value="8" max="100"> 8% </progress>
+                </span>
+            </div>
+            <div class="Statistic">
+                <span class="StatisticTypeImage">
+                <img src="/assets/Files/file.png" class="StatisticImage">
+                <span class="StatisticType">Text</span>
+            </span>
+                <span class="StatisticBar">
+                    <label for="file">12%</label>
+                    <progress id="file" value="12" max="100"> 12% </progress>
+                </span>
+            </div>
+            <div class="Statistic">
+               <span class="StatisticTypeImage">
+                <img src="/assets/Files/pdf.png" class="StatisticImage">
+                <span class="StatisticType">PDF</span>
+            </span>
+                <span class="StatisticBar">
+                    <label for="file">20%</label>
+                    <progress id="file" value="20" max="100"> 20% </progress>
+                </span>
+            </div>
+            <div class="Statistic">
+                <span class="StatisticTypeImage"> <img src="/assets/Files/headphone.png" class="StatisticImage">
+                <span class="StatisticType">Audio</span></span>
+                <span class="StatisticBar">
+                    <label for="file">28%</label>
+                    <progress id="file" value="28" max="100"> 28% </progress>
+                </span>
+            </div>
+        </div>
+    </div>
+     <div class="HalfWidthDiv">
+       <div class="ElementContentHalf">
+        <h5>Recent Activities</h5><br>
+        <div class="Activity">
+            <span class="ActivityDateImage"><label class="DateActivity">12, Aug</label>
+                 <img src="/assets/Activity/file.png" class="ActivityImage">
+                <span class="ActivityType">File was removed</span></span>
+             
+        </div>
+        <div class="Activity">
+            <span class="ActivityDateImage"><label class="DateActivity">9, Aug</label>
+                 <img src="/assets/Activity/pencil.png" class="ActivityImage">
+                <span class="ActivityType">File was modified</span></span>
+             
+        </div>
+        <div class="Activity">
+            <span class="ActivityDateImage"><label class="DateActivity">4, Aug</label>
+                 <img src="/assets/Activity/download.png" class="ActivityImage">
+                <span class="ActivityType">File was downloaded</span></span>
+             
+        </div>
+        <div class="Activity">
+            <span class="ActivityDateImage"><label class="DateActivity">12, Sep</label>
+                 <img src="/assets/Activity/upload.png" class="ActivityImage">
+                <span class="ActivityType">New Upload Was Added</span></span>
+             
+        </div> <div class="Activity">
+            <span class="ActivityDateImage"><label class="DateActivity">4, Sep</label>
+                 <img src="/assets/Activity/download.png" class="ActivityImage">
+                <span class="ActivityType">File was downloaded</span></span>
+             
+        </div>
+        </div>
+    </div>
+  
+</div>
+
+</div>
+
+<div class="modal fade" id="sectionsModal" tabindex="-1" role="dialog" aria-labelledby="sectionsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sectionsModalLabel">Manage Sections</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="SectionsModalBody">
+         <input type="checkbox" id="AccountChx" [checked]="showAccountInfo" (change)="ChangeCheckBox()"><label>Account Info</label>
+         <br><br>
+         <input type="checkbox" checked><label>Monthly Activity</label>
+         <br><bR>
+            <input type="checkbox" checked><label>Total Storage</label>
+            <br><bR>
+                <input type="checkbox" checked><label>Statistics</label>
+         <br><bR>
+            <input type="checkbox" checked><label>Recent Activity</label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" (click)="ManageSections()" data-dismiss="modal" class="btn btn-primary">Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reportModalLabel">Report Issue</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="SectionsModalBody">
+        <h3>What the problem?</h3><br>
+        <textarea style="outline: none;" rows="5" cols="60" placeholder="Write Here"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" (click)="ManageSections()" data-dismiss="modal" class="btn btn-primary">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>

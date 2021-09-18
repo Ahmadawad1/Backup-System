@@ -1,0 +1,32 @@
+<form [formGroup]="reactiveForm">
+    <h3>Registration</h3>
+    <br>
+    
+    <input type="text" formControlName="name" autocomplete="off" class="InputField" name="FullName" placeholder="Full Name" >
+    <span *ngIf="reactiveForm.controls['name'].errors && reactiveForm.controls['name'].errors.required && (reactiveForm.controls['name'].dirty || reactiveForm.controls['name'].touched)" class="ErrorMsg">Required Field</span>
+    <span *ngIf="reactiveForm.controls['name'].errors && reactiveForm.controls['name'].errors.minlength && (reactiveForm.controls['name'].dirty || reactiveForm.controls['name'].touched)" class="ErrorMsg">Min 4 characters</span>
+    <br><br>
+    <input type="email" formControlName="email" autocomplete="off" class="InputField" name="Email" placeholder="Email" >
+    <span *ngIf="reactiveForm.controls['email'].errors && reactiveForm.controls['email'].errors.required && (reactiveForm.controls['email'].dirty || reactiveForm.controls['email'].touched)" class="ErrorMsg">Required Field</span>
+    <span *ngIf="reactiveForm.controls['email'].errors && reactiveForm.get('email').errors.email && (reactiveForm.controls['email'].dirty || reactiveForm.controls['email'].touched)" class="ErrorMsg">Invalid Email</span>
+    <br><br>
+    <input type="password" (change)="OnChangePassword()" formControlName="password" class="InputField" name="Password"  placeholder="Password" > 
+    <span *ngIf="reactiveForm.controls['password'].errors && reactiveForm.controls['password'].errors.required && (reactiveForm.controls['password'].dirty || reactiveForm.controls['password'].touched)" class="ErrorMsg">Required Field</span>
+    <span *ngIf="reactiveForm.controls['password'].errors && reactiveForm.controls['password'].errors.minlength && (reactiveForm.controls['password'].dirty || reactiveForm.controls['password'].touched)" class="ErrorMsg">Min 6 characters</span>    <br><br>
+    <input type="password" (change)="OnChangePassword()"  formControlName="confirmPassword" class="InputField" name="ConfirmPassword" placeholder="Confirm Password" >
+    <span *ngIf="reactiveForm.controls['confirmPassword'].errors && reactiveForm.controls['confirmPassword'].errors.required && (reactiveForm.controls['confirmPassword'].dirty || reactiveForm.controls['confirmPassword'].touched)" class="ErrorMsg">Required Field</span>
+    <span *ngIf="reactiveForm.controls['confirmPassword'].errors && reactiveForm.controls['confirmPassword'].errors.minlength && (reactiveForm.controls['confirmPassword'].dirty || reactiveForm.controls['confirmPassword'].touched)" class="ErrorMsg">Min 6 characters</span> 
+       <br>
+    <span *ngIf="isMatchedPassword == false && (reactiveForm.controls['password'].value.length > 0 && reactiveForm.controls['confirmPassword'].value.length >0)" class="ErrorMsg">Passwords don't match</span>
+
+
+    <br>
+    <label style="font-size: 14px;">Already have an account?</label>&nbsp;&nbsp;<a  [routerLink]="['/login']">login</a>
+    <br>
+    <span *ngIf ="databaseError" class="ErrorMsg">Database Error</span>
+    <span *ngIf ="usedEmail" class="ErrorMsg ">Email is already used</span>
+    <br><br>
+
+    <button id="Confirm" (click)="SubmitForm()" type="button">Confirm</button> &nbsp;&nbsp;<button (click)="isMatchedPassword = true" id="Reset" type="reset">Reset</button>
+    <br>
+    </form>

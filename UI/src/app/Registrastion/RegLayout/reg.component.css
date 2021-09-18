@@ -1,0 +1,81 @@
+#MainDiv
+{
+background: linear-gradient(#e66465, #9198e5);
+height: 100%;
+width: 100%;
+min-height: 100%;
+text-align: center;
+padding-top:5%;
+margin: 0;
+}
+.ErrorMsg{
+    color:rgb(235, 77, 77);
+    font-size: 15px;
+    font-weight: 100;
+}
+
+form{
+    padding: 50px;
+    width: 43%;
+margin-left: 27%;
+border-radius: 10px;
+font-family: system-ui;
+text-align: left;
+font-weight: 100;
+border:hidden;
+    background-color: #fff;
+}
+.InputField
+{
+    padding:10px;
+    border-radius: 5px;
+    border:hidden;
+    outline:none;
+    width:100%;
+    background-color:rgb(233, 233, 233)
+}
+button{
+border-radius: 50px;
+outline: none;
+border:hidden;
+width:45%;
+cursor: pointer;
+transition: ease 0.5s;
+font-weight: 600;
+padding:10px
+}
+#Confirm{
+    background-color:rgb(141, 189, 69) ;
+    color: white;
+}
+#Confirm:hover{
+    background-color:rgb(112, 156, 46) ;
+}
+#Reset:hover{
+    background-color:rgb(179, 179, 179)
+}
+a{
+font-size: 15px;
+}
+@media screen and (max-width:800px) {
+   form{
+       width: 60%;margin-left: 20%;
+   } 
+}
+@media screen and (max-width:600px) {
+    form{
+        width: 75%;margin-left: 10%;
+    } 
+ }@media screen and (max-width:470px) {
+    form{
+        width: 100%;
+        margin-left: 0 !important;
+        border-radius: 0;
+        height: 100%;
+        padding-left: 20px;
+        padding-right:20px ;
+    } 
+#MainDiv{
+padding:0 !important
+}
+ }

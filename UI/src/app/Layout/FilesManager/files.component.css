@@ -1,0 +1,141 @@
+#HeaderButtons{
+    list-style-type:none ;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    float: right;
+    display: inline-flex;
+}.HeaderBtns2:hover{
+    background-color:#1c75ce ;
+}.HeaderBtns3:hover{
+    background-color:#bcd3e9 ;
+}.HeaderBtns4:hover{
+    background-color:#f35d42 ;
+}#FMDiv{
+    width: 100%;
+    min-height: 100%;
+padding: 90px 5% 30px 5%;
+    text-align: left;
+}#Files{
+    width: 100%;
+    display: inline-flex;
+float: left;
+padding-bottom:50px ;
+flex-wrap:wrap ;
+height: 100%;;
+}
+.FileBox{
+padding: 20px 10px 0 10px  ;
+background-color: #ffffff;
+border: 1px solid rgb(199, 199, 199);
+border-radius: 5px;
+margin-right: 10px;
+margin-top: 20px;
+
+text-align: center;
+box-shadow: 0 3px 10px  rgb(0 0 0 / 0.2) ;
+}
+.FileImage{
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+}
+.FileIcons{
+    padding:0;
+    list-style-type: none;
+    display: inline-flex;
+
+}
+.FileIcon{
+    padding: 10px;
+    color:#0464c4;
+
+
+}.FileIcon span{
+    font-size: 22px;
+    cursor: pointer;
+}
+.FileIcon span:hover{
+    color: #3699FF;
+}
+.FileName{
+    display: block;
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.FileSize{
+    display: block;
+    font-size: 16px;
+    font-weight: 400;margin-top: 10px;
+}
+.HeaderBtns:hover{
+    color: #3699FF;
+}.HeaderBtns2{
+    color: white;
+    background-color: #3699FF;
+    border-color: #3699FF;
+    padding: 7px 17px 7px 17px ;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 13px;
+    border: hidden;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: ease 0.5s;
+    cursor: pointer;  
+}#FMHeader{
+    display: block;
+    width: 100%;
+    padding:0 0 10px 10px;
+}
+#FMHeader span{
+    color: #3F4254;
+    font-size: 17px;
+    font-weight: 600;
+}
+.HeaderBtns{
+    color: #7E8299;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    padding: 7px 17px 7px 17px ;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 13px;
+    border: hidden;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+button{
+    outline: none;
+}
+.HeaderBtns3{
+    color: #3699FF;
+    background-color:#E1F0FF ;
+    border-color: #E1F0FF;
+    padding: 7px 17px 7px 17px ;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 13px;
+    border: hidden;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+.HeaderBtns4{
+    color: #ffffff;
+    background-color:#e64124 ;
+    border-color: #e64124;
+    padding: 7px 17px 7px 17px ;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 13px;
+    border: hidden;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: ease 0.5s;
+    cursor: pointer;
+}

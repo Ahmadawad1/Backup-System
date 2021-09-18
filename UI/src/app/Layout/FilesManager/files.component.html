@@ -1,0 +1,31 @@
+<div id="FMDiv">
+    <div id="FMHeader">
+      <span>Files Manager</span>
+     <ul id="HeaderButtons">
+        
+
+        <li><button class="HeaderBtns"><span class="bi bi-funnel"></span>&nbsp;&nbsp; Filter</button></li>
+        <li> <button class="HeaderBtns2" type="button" ><span style="color: white;" class="bi bi-cloud-arrow-up"></span>&nbsp;&nbsp; Upload</button></li>
+     
+     </ul>
+     
+     
+     
+    </div>
+    <div id="Files">
+    <div *ngFor="let file of files" class="FileBox">
+<img  src="{{file.image}}" class="FileImage"/>
+
+
+<span class="FileName">{{file.name}}</span>
+<span class="FileSize">{{file.size}}</span>
+<ul class="FileIcons">
+    <li class="FileIcon"><span class="bi bi-download"></span></li>
+    <li class="FileIcon"><span class="bi bi-eye"></span></li>
+    <li class="FileIcon"><span class="bi bi-share"></span></li>
+    <li class="FileIcon"><span class="bi bi-grid-fill"></span></li>
+</ul>
+    </div>
+   
+</div>
+</div>
